@@ -1,3 +1,5 @@
+import patterns.sdk.PatternsLogicBasic;
+
 public class OnlinePattern{
     public static PatternLogicBasic getPatternLogic(){
         return new PatternsLogicBasic() {
