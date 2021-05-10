@@ -4,6 +4,7 @@ public class Service{
     try{
       JOptionPane.showMessageDialog(null, "Service code : " +  (int)(Math.random()*10000) );
       Thread.sleep(1000);
+      serve(uid);
     }catch(Exception ex){
       ex.printStackTrace();
     }
