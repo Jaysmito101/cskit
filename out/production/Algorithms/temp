@@ -1,0 +1,16 @@
+final String[] t = {""};
+                master.RuntimeCompiler runtimeCompiler = new RuntimeCompiler();
+                PrintStream tmp = System.out;
+                System.setOut(new PrintStream(new OutputStream(){
+                    @Override
+                    public void write(int i) throws IOException {
+                        t[0] += ((char)i);
+                    }
+                }));
+                System.setOut(tmp);
+                runtimeCompiler.addClass("SOPExecuter", "" +
+                        "public class SOPExecuter{\n" +
+                        "    public void execute(){\n" +
+                        "        System.out.println(" + 1 + ");\n" +
+                        "    } \n" +
+                        "}");
